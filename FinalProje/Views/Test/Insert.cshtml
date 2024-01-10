@@ -1,0 +1,47 @@
+﻿@using FinalProje.ViewModels
+@{
+    ViewData["Title"] = "Insert";
+}
+@model SoruModel
+<h2>Ürün Ekle</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="Insert">
+            <div class="mb-3">
+                <label asp-for="Question" class="form-label">Soru</label>
+                <input type="text" class="form-control" asp-for="Question">
+                <span asp-validation-for="Question" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Answer1" class="form-label">1. Cevap</label>
+                <textarea rows="3" class="form-control" asp-for="Answer1"></textarea>
+                <span asp-validation-for="Answer1" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Answer2" class="form-label">2. Cevap</label>
+                <textarea rows="3" class="form-control" asp-for="Answer2"></textarea>
+                <span asp-validation-for="Answer2" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Answer3" class="form-label">3. Cevap</label>
+                <textarea rows="3" class="form-control" asp-for="Answer3"></textarea>
+                <span asp-validation-for="Answer3" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Answer4" class="form-label">4. Cevap</label>
+                <textarea rows="3" class="form-control" asp-for="Answer4"></textarea>
+                <span asp-validation-for="Answer4" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <a asp-action="Index" class="btn btn-outline-secondary">Geri Dön</a>
+                <input type="submit" value="Kaydet" class="btn btn-outline-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+}
+

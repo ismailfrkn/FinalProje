@@ -1,0 +1,41 @@
+﻿@using FinalProje.ViewModels
+@{
+    ViewData["Title"] = "Detail";
+}
+@model SoruModel
+<h2>Ürün Detayı</h2>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <table class="table">
+            <tr>
+                <td><b>Adı</b></td>
+                <td>@Model.Question</td>
+            </tr>
+            <tr>
+                <td><b>Fiyatı</b></td>
+                <td>@Model.Answer1</td>
+            </tr>
+            <tr>
+                <td><b>Açıklama</b></td>
+                <td>@Model.Answer2</td>
+            </tr>
+            <tr>
+                <td><b>Açıklama</b></td>
+                <td>@Model.Answer3</td>
+            </tr>
+            <tr>
+                <td><b>Açıklama</b></td>
+                <td>@Model.Answer4</td>
+            </tr>
+        </table>
+
+        <a asp-action="Index" class="btn btn-outline-secondary">Geri Dön</a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-warning">Düzenle</a>
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-outline-danger">Sil</a>
+
+    </div>
+</div>
+
+
